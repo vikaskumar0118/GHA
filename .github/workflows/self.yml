@@ -1,0 +1,20 @@
+name: Self Hosted Runner
+
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: system info
+        run: |
+          unname -a
+          sw_vers
+          python3 --version || echo "python not found"
