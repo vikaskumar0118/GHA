@@ -19,7 +19,9 @@ jobs:
       - name: All types of secrets and variables
         run: |
           echo "Base API URL: $BASEAPI"
-          echo "Add other actions to build,"
+          echo "Workflow variables: Add other actions to build,"
           echo "test, and deploy your project."
+          echo "configuration variable | Version of App is ${{vars.VERSION}}"
+          echo "configuration secrets | Secrete key is ${{secrets.KEY}}"
         env:
           BASEAPI: 'http://baseurl.api/'
