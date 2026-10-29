@@ -2,6 +2,7 @@ name: Variables in GitHub Actions
 
 on:
   push:
+    branches: ['main']
   workflow_dispatch:
 
 env:
