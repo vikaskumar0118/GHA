@@ -23,5 +23,6 @@ jobs:
           echo "test, and deploy your project."
           echo "configuration variable | Version of App is ${{vars.VERSION}}"
           echo "configuration secrets | Secrete key is ${{secrets.KEY}}"
+          echo "context variables |Repo name is ${{github.repository}}"
         env:
           BASEAPI: 'http://baseurl.api/'
