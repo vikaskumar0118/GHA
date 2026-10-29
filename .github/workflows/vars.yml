@@ -1,0 +1,24 @@
+name: Variables in GitHub Actions
+
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  BASEAPI: 'http://baseurl.api/'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      BASEAPI: 'http://baseurl.api/'
+
+    steps:
+      - name: All types of secrets and variables
+        run: |
+          echo "Base API URL: $BASEAPI"
+          echo "Add other actions to build,"
+          echo "test, and deploy your project."
+        env:
+          BASEAPI: 'http://baseurl.api/'
